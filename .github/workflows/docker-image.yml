@@ -17,8 +17,8 @@ jobs:
         run: |
           echo "${{ secrets.DOCKERPASSWORD }}" | docker login -u "eriksengrace" --password-stdin
           docker build -t cool_docker .
-          docker tag cool_docker eriksengrace/nice_docker:latest
-          docker push eriksengrace/nice_docker:latest
+          docker tag cool_docker eriksengrace/pythontwo:latest
+          docker push eriksengrace/pythontwo:latest
 
       - name: Create kubeconfig
         run: |
